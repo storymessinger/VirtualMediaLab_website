@@ -1,0 +1,2 @@
+# ignore source files which do not relate in actual developing
+sources/*
