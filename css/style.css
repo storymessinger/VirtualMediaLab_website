@@ -1,1 +1,150 @@
-/*  style.css */
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
+
+/*    Reset CSS  */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+ol,
+ul {
+    list-style: none;
+}
+a {
+    outline: 0;
+    text-decoration: none;
+    color: #bbb;
+}
+img {
+    border: 0;
+}
+
+
+/* Basics */
+* {
+    -webkit-box-sizing: border-box:
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*    From here    */
+
+html {
+    width:100%;
+    height:100%;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+/* Selected text is highlighted in this color */
+p::selection {
+    color:#111;
+    background:#eeff41;
+}
+
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    min-height: 100vh; /* for the sticky footer */
+    
+}
+.nav {
+    height: 110px;
+    width: 100%;
+    display: flex;
+}
+
+.nav img {
+    padding-left: 30px;
+}
+
+.front {
+    height: 300px;
+    width: 100%; 
+    background-color: blue; 
+}
+.front-BG  {
+    height: 100%;
+    width: 100%;
+    background: url(/imgs/Home_MainPic.jpg) no-repeat center center fixed; 
+    background-size: cover;
+}
+.main {
+    width: 100vw;
+    background-color: indianred;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    
+    flex: 1; /* for the sticky footer */
+}
+
+.research {
+    height: 400px;
+    width: 100%;
+    background-color: #E9E5DE;
+}
+
+.publication {
+    height: 400px;
+    width: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+
+.publication .recent {
+    height: 300px;
+    width: 300px;
+    background-color: black;
+}
+    
+.news {
+    border-top: 1px solid #E9E5DE;
+    height: 400px;
+    width: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+
+.news .recent {
+    height: 300px;
+    width: 300px;
+    background-color: grey;
+}
+
+.footer {
+    height: 220px;
+    width: 100%;
+    background-color: #222225;
+    
+}
+
+@media screen and (min-width: 450px) {
+    
+    .front {
+        height: 780px;
+    }
+    .main {
+        flex-flow: row wrap;
+    }
+    .publication {
+        width: 50%;
+        justify-content: flex-end;
+    }
+    .news {
+        border-top: 0px;
+        width: 50%;
+        justify-content: flex-start;
+    }
+    
+    
+}
+
+@media screen and (min-width: 1280px) {
+    
+}
