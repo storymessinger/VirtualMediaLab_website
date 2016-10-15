@@ -51,20 +51,60 @@ body {
     min-height: 100vh; /* for the sticky footer */
     
 }
-.nav {
-    height: 110px;
-    width: 100%;
+.main-nav {
+    height: 90px;
+    width: 100vw;
     display: flex;
+    
+    font-size: 12px; /*change*/
 }
 
-.nav img {
-    padding-left: 30px;
+.main-nav img {
+    height: 80px;
+    width:auto;
+    padding-left: 2.5em;
+    padding-right: 6.25em;
+}
+
+.main-nav-list {
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.main-nav-list a {
+/*    padding-right: 6.25em; */
+    font-size: 1.25em;
+    font-weight: 600;
+    text-decoration: none;
+    display: flex;
+    color: #8B8884;
+   }
+.main-nav-list a:hover {
+    background: #ccc;
+    color: #EA5A29;
+  }
+
+.main-nav-search {
+    width: 16em; /*change*/
 }
 
 .front {
     height: 300px;
     width: 100%; 
     background-color: blue; 
+}
+
+#front-orange-filter {
+    width: 100%;
+    height: 100%;
+    bacground-color: rgb(234,90,41,0.3);
+    
 }
 .front-BG  {
     height: 100%;
