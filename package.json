@@ -1,0 +1,32 @@
+{
+  "name": "virtualmedialab",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-responsive-images": "^0.1.9",
+    "load-grunt-tasks": "^3.5.2"
+  },
+  "description": "website-project",
+  "main": "Gruntfile.js",
+  "dependencies": {
+    "grunt-responsive-images": "^0.1.9",
+    "grunt-contrib-imagemin": "^1.0.1"
+  },
+  "scripts": {
+    "test": "grunttest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/storymessinger/VirtualMediaLab_website.git"
+  },
+  "keywords": [
+    "website"
+  ],
+  "author": "Jundong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/storymessinger/VirtualMediaLab_website/issues"
+  },
+  "homepage": "https://github.com/storymessinger/VirtualMediaLab_website#readme"
+}
