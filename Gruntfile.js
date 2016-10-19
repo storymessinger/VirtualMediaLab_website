@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         dynamic: {
             files: [{
                 expand: true,
-                cwd: 'before_imgs/',
+                cwd: 'imgs/',
                 src: ['*.{png,jpg,gif}'],
                 dest: 'imgs/'
                 }]
@@ -34,8 +34,8 @@ module.exports = function(grunt) {
                 files: [{
                     expand:true,
                     src: ['*.{jpg,gif,png}'],
-                    cwd: 'before_imgs/', 
-                    dest: 'before_imgs/responsive/'
+                    cwd: 'imgs/', 
+                    dest: 'imgs/responsive/'
                 }]
             }
         
@@ -47,6 +47,9 @@ module.exports = function(grunt) {
     ]);
     grunt.registerTask('min', [
     'imagemin',
+    ]);
+    grunt.registerTask('res', [
+    'responsive_images'
     ]);
 };
 

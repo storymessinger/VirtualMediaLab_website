@@ -14,10 +14,12 @@ ul {
 a {
     outline: 0;
     text-decoration: none;
-    color: #bbb;
+    color: #353535;
 }
+
 img {
     border: 0;
+    transition: width 0.5s;
 }
 
 
@@ -37,7 +39,6 @@ html {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
-
 /* Selected text is highlighted in this color */
 p::selection {
     color:#111;
@@ -48,7 +49,7 @@ body {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    min-height: 100vh; /* for the sticky footer */
+    min-height: 100vh; /* for the sticky footer  */
     
 }
 .main-nav {
@@ -56,11 +57,11 @@ body {
     width: 100vw;
     display: flex;
     
-    font-size: 12px; /*change*/
+    font-size: 10px; /*em_change*/
 }
 
-.main-nav img {
-    height: 100px;
+.main-nav .logo {
+    height: 6.25em;
     width:auto;
     padding-left: 3em;
     padding-right: 6.25em;
@@ -80,13 +81,12 @@ body {
 .main-nav-list a {
 /*    padding-right: 6.25em; */
     font-size: 1.25em;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
     display: flex;
     color: #8B8884;
    }
 .main-nav-list a:hover {
-    background: #ccc;
     color: #EA5A29;
   }
 
@@ -97,7 +97,38 @@ body {
 .front {
     height: 300px;
     width: 100%; 
-    background-color: blue; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    font-size: 7px; /*em_change*/
+}
+
+.front-intro {
+    /* Place it in the middle */ 
+    width: 90vw;
+    max-width: 900px;
+    
+    /* Makes the front-intro infront of the image */
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    
+    /* font */
+    color: white;
+}
+
+.front-intro-title {
+    font-size: 5em;
+    font-weight: 700;
+}
+
+.front-intro-about {
+    font-size: 2em; 
+}
+
+.front-intro-body {
+    display: none;
 }
 
 .front-BG  {
@@ -105,10 +136,11 @@ body {
     width: 100%;
     background: url(/imgs/Home_MainPic.jpg) no-repeat center center fixed; 
     background-size: cover;
+    filter: brightness(70%);
 }
 .main {
     width: 100vw;
-    background-color: indianred;
+    background-color: indianred; /*remove*/
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -117,68 +149,333 @@ body {
 }
 
 .research {
-    height: 400px;
     width: 100%;
     background-color: #E9E5DE;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    
+    padding-top: 6em;
+    padding-bottom: 10em;
+    
+    font-size: 10px; /*em_change*/
 }
 
-.publication {
-    height: 400px;
+.research-intro {
+    width: 100%;
+    padding-bottom: 6em;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    text-align: center;
+}
+
+/* intro-title for research. news and pub */
+.intro-title {
+    width: 100%;
+    font-size: 3.2em;
+    font-weight: 600;
+    padding-bottom: 0.5em;
+    text-align: center;
+}
+
+/* more info about intro-title */
+.intro-body{
+    padding: 0em 1.5em 0em 1.5em ;
+    font-size: 1.5em;
+    color: #646367;
+}
+
+.research-box {
+    width: 80vw;
+    max-width: 500px;
+    font-size: 1.75em;
+    font-weight: 700;
+    margin: 5vw 0 0 0;
+    text-align: center;
+    
+}
+.research-box a:hover {
+    color: #EA5A29;
+  }
+
+
+.research-box img {
+    width: 100%;
+}
+
+
+.container {
     width: 100%;
     background-color: #FFFFFF;
     display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center; 
+    padding-top: 6em;
+    padding-bottom: 10em;
+    font-size: 10px;
+    
+}
+.publication {
+    
+    width: 90vw;
+    display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
 }
 
-.publication .recent {
-    height: 300px;
-    width: 300px;
-    background-color: black;
+.publication-recent {
+    padding-bottom: 1.5em;
+    font-size: 1.3em;
+    text-align: center;
+    color: #F05A29;
+    font-weight: 600;
 }
+
     
 .news {
     border-top: 1px solid #E9E5DE;
-    height: 400px;
-    width: 100%;
-    background-color: #FFFFFF;
+    
+    width: 90vw;
     display: flex;
+    flex-flow: column nowrap;
     justify-content: center;
 }
 
-.news .recent {
-    height: 300px;
-    width: 300px;
-    background-color: grey;
+.news-recent {
+    display: flex;
+    padding-bottom: 1.5em;
+}
+
+
+.news-date {
+    width: 4em;
+    text-align: center;
+    padding-right: 2em;
+}
+
+.news-date span {
+    font-size: 3.2em;
+    color: #FAAF40;
+}
+
+.news-body {
+    padding-left: 2em;
+    flex-grow: 1;
+}
+.news-body span {
+    font-size: 1.3em;
+    color: #F05A29;
+}
+.View-all {
+    width: 100%;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+.View-all-b {
+    margin: auto;
+    width: 110px;
+    height: 40px;
+    text-align: center;
+    color: white;
+    background-color: #646367;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .footer {
-    height: 220px;
+    height: 200px;
     width: 100%;
     background-color: #222225;
     
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10vw;
+    padding-left: 10vw;
+    
+    color: white;
 }
 
-@media screen and (min-width: 450px) {
+.footer-contact {
+    flex-grow: 1;
+}
+.footer-logo {
+    width: 17vw;
+}
+.footer-logo img {
+    width: 100%;
+}
+
+.very-bottom {
+    width: 100%;
+    height: 15px;
+    background-color: #FAAF40;
+}
+
+
+
+
+
+
+
+
+@media screen and (min-width: 500px) {
+    /*em_change_start*/
+    .main-nav {
+        font-size: 12px; /*em_change*/
+    }
+    
+    .front {
+        font-size: 12px;
+    }
+    
+    .research {
+        font-size: 12px; /*em_change*/
+    }
+    
+    .container {
+        font-size: 12px;
+    }
+    /*em_change_end*/
+    
+    .main {
+        flex-flow: row wrap;
+    }
+    
+    .front {
+        height: 500px;
+    }
+    
+    .front-intro {
+        width: 70vw;
+    }
+    
+  
+    .front-intro-body {
+        display: none;
+    }
+    
+    .intro-title {
+        text-align: left;
+    }
+    
+    /* pub & news setting their things in rows */
+    .publication {
+        width: 40vw;
+        min-width: 450px;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    
+    .news {
+        
+        width: 40vw;
+        min-width: 450px;
+        border-top: none;
+        flex-flow: row wrap;
+        justify-content: space-between;
+    }
+    
+    
+}
+
+@media screen and (min-width: 1200px) {
+    
+    /*em_change_start*/
+    .main-nav {
+        font-size: 14px; /*em_change*/
+    }
+    
+    .front {
+        font-size: 14px;
+    }
+    
+    .research {
+        flex-flow: row wrap;
+
+        font-size: 14px; /*em_change*/
+    }
+    
+    .container {
+        font-size: 14px;
+    }
+    
+    /*em_change_end*/
     
     .front {
         height: 780px;
     }
-    .main {
-        flex-flow: row wrap;
+    .front-intro-body {
+        display: unset;
+        font-size: 1.4em;
+        line-height: 150%;
     }
-    .publication {
-        width: 50%;
-        justify-content: flex-end;
-    }
-    .news {
-        border-top: 0px;
-        width: 50%;
-        justify-content: flex-start;
+    .research-box {
+        width: 25vw;
+        max-width: 370px;
+        margin: 0 5vw 0 0 ;
     }
     
+    .research-box div:last-child {
+        margin-right:0;
+    }
+    
+    .container {
+        flex-flow: row nowrap; /* news and pub now shown in row */
+        justify-content: center;
+        align-items: flex-start;
+    }
+    
+    /* space between pub and news */
+    
+    .publication {
+        padding-right: 3vw; 
+    }
+    
+    .news {
+        padding-left: 3vw;
+        border-left: 1px solid #E9E5DE;
+    }
+    
+        
+    .news-recent div:not(:first-child) {
+        padding-left: 5%; 
+    }
+    
+    /* View-all btn is not going to be center */
+    .View-all-b {
+        margin: 0; 
+    }
     
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1500px) {
     
+    /*em_change_start*/
+    .main-nav {
+        font-size: 16px; /*em_change*/
+    }
+    
+    .front {
+        font-size: 16px;
+    }
+    
+    .research {
+        flex-flow: row wrap;
+
+        font-size: 16px; /*em_change*/
+    }
+    
+    .container {
+        font-size: 16px;
+    }
+    
+    /*em_change_end*/
 }
