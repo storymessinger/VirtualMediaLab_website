@@ -124,7 +124,8 @@ body {
     /* Makes the front-intro infront of the image */
     position: absolute;
     z-index: 101;
-    text-align: center;
+    margin: auto;
+    /* text-align: center << not working in safari */
     
     /* font */
     color: white;
