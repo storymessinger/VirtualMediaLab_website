@@ -10,15 +10,15 @@ $(function(){
                     "Partners":"KAI Co., CJ CGV Co."
                 },
                 "Results" : {
-                    "Image" : ""
+                    "Image" : "imgs/project_img_01_650.jpg"
                 },
                 "Funding" : {
-                    "Image" : "",
-                    "About" : ""
+                    "Image" : "imgs/black_110x50.png",
+                    "About" : "Institute for Information & communications Techonology Promotion"
                 },
                 "Manager" : {
-                    "Image" : "",
-                    "Name" : ""
+                    "Image" : "imgs/black_80x80.png",
+                    "Name" : "Bumki Kim"
                 }
             }, 
             "Curved-projection Project" : {
@@ -29,7 +29,7 @@ $(function(){
                     "Partners":"KAI Co."
                 },
                 "Results" : {
-                    "Image" : ""
+                    "Image" : "imgs/project_img_02_650.jpg"
                 },
                 "Funding" : {
                     "Image" : "",
