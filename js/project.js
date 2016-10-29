@@ -2,17 +2,43 @@ $(function(){
     
     var model = {
         "OngoingProjects" : {
-            "Multi_projection_Project" : {
-                "Full-name" : "Development of Realistic Media and Presentation System for Large Auditorium",
-                "Team": "EVE",
-                "Area": "Immersive media display system, Multi-projection contents optimization",
-                "Partners":"KAI Co., CJ CGV Co."
+            "Multi-projection Project" : {
+                "Information" : { 
+                    "Full-name" : "Development of Realistic Media and Presentation System for Large Auditorium",
+                    "Team": "EVE",
+                    "Area": "Immersive media display system, Multi-projection contents optimization",
+                    "Partners":"KAI Co., CJ CGV Co."
+                },
+                "Results" : {
+                    "Image" : ""
+                },
+                "Funding" : {
+                    "Image" : "",
+                    "About" : ""
+                },
+                "Manager" : {
+                    "Image" : "",
+                    "Name" : ""
+                }
             }, 
-            "Curved_projection_Project" : {
-                "Full-name" : "Development of Realistic Media and Presentation System for Large Auditorium",
-                "Team": "EVE",
-                "Area": "Immersive media display system, Multi-projection contents optimization",
-                "Partners":"KAI Co."
+            "Curved-projection Project" : {
+                "Information" : { 
+                    "Full-name" : "Development of Realistic Media and Presentation System for Large Auditorium",
+                    "Team": "EVE",
+                    "Area": "Immersive media display system, Multi-projection contents optimization",
+                    "Partners":"KAI Co."
+                },
+                "Results" : {
+                    "Image" : ""
+                },
+                "Funding" : {
+                    "Image" : "",
+                    "About" : ""
+                },
+                "Manager" : {
+                    "Image" : "",
+                    "Name" : ""
+                }
             }
         },
         
@@ -49,12 +75,13 @@ $(function(){
         
         render: function() {
             var htmlStr='';
-            console.log(octopus.getOnProjects());
 //            octopus.getOnProjects().forEach(function(project){
             $.each(octopus.getOnProjects(), function(name, project){
-                htmlStr += '<li class="InfoTitle">' + name + '</li>';
-                $.each(project, function(entryIndex, entry){
-                    htmlStr += '<li class="infoIndex">' + entry + '</li>';
+                htmlStr += '<li class="infoTitle">' + name + '</li>';
+                $.each(project.Information, function(entryIndex, entry){
+                    htmlStr += '<li class="infoIndex">' +
+                        '<span>' + entryIndex + ' : ' +
+                        '</span>' + entry + '</li>';
                 });
             });
             
