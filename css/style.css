@@ -63,8 +63,8 @@ body {
 .main-nav .logo {
     height: 6.25em;
     width:auto;
-    padding-left: 3em;
-    padding-right: 6.25em;
+    margin-left: 2.5em;
+    margin-right: 5em;
 }
 
 .main-nav-list {
@@ -74,14 +74,16 @@ body {
     display: flex;
     flex-flow: row wrap;
     list-style: none;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    
+    max-width: 65em; /* In Big-screen, max size woudl be 65em x 16px = ~1000px */
   }
 
 .main-nav-list a {
 /*    padding-right: 6.25em; */
     font-size: 1.25em;
-    font-weight: 700;
+    font-weight: 600;
     text-decoration: none;
     display: flex;
     color: #8B8884;
@@ -92,7 +94,17 @@ body {
 
 .main-nav-search {
     width: 16em; /*change*/
+    margin-left: 5em;
+    margin-right: 2.5em;
+    display: flex;
+    align-items: center;
 }
+
+.search-content {
+    display: block;
+    font-size: 1.3em;
+}
+
 
 .front {
     height: 300px;
@@ -102,6 +114,8 @@ body {
     align-items: center;
     
     font-size: 7px; /*em_change*/
+    
+    overflow: hidden;
 }
 
 .front-intro {
@@ -111,7 +125,7 @@ body {
     
     /* Makes the front-intro infront of the image */
     position: absolute;
-    z-index: 1;
+    z-index: 101;
     text-align: center;
     
     /* font */
@@ -131,16 +145,15 @@ body {
     display: none;
 }
 
-.front-BG  {
+.front-BG{
     height: 100%;
     width: 100%;
-    background: url(/imgs/Home_MainPic.jpg) no-repeat center center fixed; 
+    background: url("/visualMediaLab_website/imgs/Home_MainPic.jpg") no-repeat center center fixed; 
     background-size: cover;
     filter: brightness(70%);
 }
 .main {
     width: 100vw;
-    background-color: indianred; /*remove*/
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -150,7 +163,6 @@ body {
 
 .research {
     width: 100%;
-    background-color: #E9E5DE;
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -162,6 +174,15 @@ body {
     font-size: 10px; /*em_change*/
 }
 
+.research-box-wrapper {
+    
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 .research-intro {
     width: 100%;
     padding-bottom: 6em;
@@ -170,14 +191,19 @@ body {
     align-items: center;
     text-align: center;
 }
-
-/* intro-title for research. news and pub */
+/* intro-title for research...some problem here */
+.research-intro-title {
+    width: 100%;
+    font-size: 3.2em;
+    font-weight: 600;
+    padding-bottom: 0.5em;
+}
+/* intro-title for news and pub */
 .intro-title {
     width: 100%;
     font-size: 3.2em;
     font-weight: 600;
     padding-bottom: 0.5em;
-    text-align: center;
 }
 
 /* more info about intro-title */
@@ -208,7 +234,6 @@ body {
 
 .container {
     width: 100%;
-    background-color: #FFFFFF;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -262,13 +287,15 @@ body {
 }
 
 .news-body {
-    padding-left: 2em;
+    margin-left: 2em;
     flex-grow: 1;
 }
 .news-body span {
     font-size: 1.3em;
     color: #F05A29;
 }
+
+/* Following is a simple link button */
 .View-all {
     width: 100%;
     margin-top: 3em;
@@ -318,12 +345,6 @@ body {
     height: 15px;
     background-color: #FAAF40;
 }
-
-
-
-
-
-
 
 
 @media screen and (min-width: 500px) {
@@ -397,9 +418,9 @@ body {
         font-size: 14px;
     }
     
-    .research {
+    .research-box-wrapper {
         flex-flow: row wrap;
-
+        align-items: flex-start;
         font-size: 14px; /*em_change*/
     }
     
@@ -410,7 +431,7 @@ body {
     /*em_change_end*/
     
     .front {
-        height: 780px;
+        height: 650px;
     }
     .front-intro-body {
         display: unset;
@@ -467,8 +488,7 @@ body {
         font-size: 16px;
     }
     
-    .research {
-        flex-flow: row wrap;
+    .research-box-wrapper {
 
         font-size: 16px; /*em_change*/
     }
