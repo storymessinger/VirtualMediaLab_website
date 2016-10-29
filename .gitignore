@@ -4,5 +4,5 @@ Gruntfile.js
 GruntConfig.yml
 package.json
 node_modules/*
-# sources/*
+sources/*
 
