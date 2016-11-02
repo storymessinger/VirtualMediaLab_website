@@ -16,12 +16,10 @@ a {
     text-decoration: none;
     color: #353535;
 }
-
 img {
     border: 0;
     transition: width 0.5s;
 }
-
 
 /* Basics */
 * {
@@ -30,9 +28,7 @@ img {
     box-sizing: border-box;
 }
 
-
 /*    From here    */
-
 html {
     width:100%;
     height:100%;
@@ -57,14 +53,14 @@ body {
     width: 100vw;
     display: flex;
     
-    font-size: 10px; /*em_change*/
+    font-size: 10px; /*rem_change*/
 }
 
 .main-nav .logo {
-    height: 6.25em;
+    height: 6.25rem;
     width:auto;
-    margin-left: 2.5em;
-    margin-right: 5em;
+    margin-left: 2.5rem;
+    margin-right: 5rem;
 }
 
 .main-nav-list {
@@ -77,12 +73,12 @@ body {
     justify-content: space-around;
     align-items: center;
     
-    max-width: 65em; /* In Big-screen, max size woudl be 65em x 16px = ~1000px */
+    max-width: 65rem; /* In Big-screen, max size woudl be 65rem x 16px = ~1000px */
   }
 
 .main-nav-list a {
-/*    padding-right: 6.25em; */
-    font-size: 1.25em;
+/*    padding-right: 6.25rem; */
+    font-size: 1.25rem;
     font-weight: 600;
     text-decoration: none;
     display: flex;
@@ -93,16 +89,16 @@ body {
   }
 
 .main-nav-search {
-    width: 16em; /*change*/
-    margin-left: 5em;
-    margin-right: 2.5em;
+    width: 16rem; /*change*/
+    margin-left: 5rem;
+    margin-right: 2.5rem;
     display: flex;
     align-items: center;
 }
 
 .search-content {
     display: block;
-    font-size: 1.3em;
+    font-size: 1.3rem;
 }
 
 
@@ -113,7 +109,7 @@ body {
     justify-content: center;
     align-items: center;
     
-    font-size: 7px; /*em_change*/
+    font-size: 7px; /*rem_change*/
 }
 
 .front-intro {
@@ -124,20 +120,20 @@ body {
     /* Makes the front-intro infront of the image */
     position: absolute;
     z-index: 101;
-    margin: auto;
-    /* text-align: center << not working in safari */
     
     /* font */
     color: white;
 }
 
 .front-intro-title {
-    font-size: 5em;
+    font-size: 5rem;
     font-weight: 700;
+    text-align: center;
 }
 
 .front-intro-about {
-    font-size: 2em; 
+    font-size: 2rem; 
+    text-align: center;
 }
 
 .front-intro-body {
@@ -167,10 +163,10 @@ body {
     justify-content: center;
     align-items: center;
     
-    padding-top: 6em;
-    padding-bottom: 10em;
+    padding-top: 6rem;
+    padding-bottom: 10rem;
     
-    font-size: 10px; /*em_change*/
+    font-size: 10px; /*rem_change*/
 }
 
 .research-box-wrapper {
@@ -184,7 +180,7 @@ body {
 
 .research-intro {
     width: 100%;
-    padding-bottom: 6em;
+    padding-bottom: 6rem;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -193,29 +189,29 @@ body {
 /* intro-title for research...some problem here */
 .research-intro-title {
     width: 100%;
-    font-size: 3.2em;
+    font-size: 3.2rem;
     font-weight: 600;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.5rem;
 }
 /* intro-title for news and pub */
 .intro-title {
     width: 100%;
-    font-size: 3.2em;
+    font-size: 3.2rem;
     font-weight: 600;
-    padding-bottom: 0.5em;
+    padding-bottom: 0.5rem;
 }
 
 /* more info about intro-title */
 .intro-body{
-    padding: 0em 1.5em 0em 1.5em ;
-    font-size: 1.5em;
+    padding: 0rem 1.5rem 0rem 1.5rem ;
+    font-size: 1.5rem;
     color: #646367;
 }
 
 .research-box {
     width: 80vw;
     max-width: 500px;
-    font-size: 1.75em;
+    font-size: 1.75rem;
     font-weight: 700;
     margin: 5vw 0 0 0;
     text-align: center;
@@ -237,8 +233,8 @@ body {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center; 
-    padding-top: 6em;
-    padding-bottom: 10em;
+    padding-top: 6rem;
+    padding-bottom: 10rem;
     font-size: 10px;
     
 }
@@ -251,8 +247,8 @@ body {
 }
 
 .publication-recent {
-    padding-bottom: 1.5em;
-    font-size: 1.3em;
+    padding-bottom: 1.5rem;
+    font-size: 1.3rem;
     text-align: center;
     color: #F05A29;
     font-weight: 600;
@@ -270,35 +266,35 @@ body {
 
 .news-recent {
     display: flex;
-    padding-bottom: 1.5em;
+    padding-bottom: 1.5rem;
 }
 
 
 .news-date {
-    width: 4em;
+    width: 4rem;
     text-align: center;
-    padding-right: 2em;
+    padding-right: 2rem;
 }
 
 .news-date span {
-    font-size: 3.2em;
+    font-size: 3.2rem;
     color: #FAAF40;
 }
 
 .news-body {
-    margin-left: 2em;
+    margin-left: 2rem;
     flex-grow: 1;
 }
 .news-body span {
-    font-size: 1.3em;
+    font-size: 1.3rem;
     color: #F05A29;
 }
 
 /* Following is a simple link button */
 .View-all {
     width: 100%;
-    margin-top: 3em;
-    margin-bottom: 3em;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .View-all-b {
@@ -347,23 +343,9 @@ body {
 
 
 @media screen and (min-width: 500px) {
-    /*em_change_start*/
-    .main-nav {
-        font-size: 12px; /*em_change*/
-    }
-    
-    .front {
+    html {
         font-size: 12px;
     }
-    
-    .research {
-        font-size: 12px; /*em_change*/
-    }
-    
-    .container {
-        font-size: 12px;
-    }
-    /*em_change_end*/
     
     .main {
         flex-flow: row wrap;
@@ -406,35 +388,18 @@ body {
     
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1080px) {
     
-    /*em_change_start*/
-    .main-nav {
-        font-size: 14px; /*em_change*/
-    }
-    
-    .front {
+    html {
         font-size: 14px;
     }
-    
-    .research-box-wrapper {
-        flex-flow: row wrap;
-        align-items: flex-start;
-        font-size: 14px; /*em_change*/
-    }
-    
-    .container {
-        font-size: 14px;
-    }
-    
-    /*em_change_end*/
     
     .front {
         height: 650px;
     }
     .front-intro-body {
         display: unset;
-        font-size: 1.4em;
+        font-size: 1.4rem;
         line-height: 150%;
     }
     .research-box {
@@ -478,23 +443,7 @@ body {
 
 @media screen and (min-width: 1500px) {
     
-    /*em_change_start*/
-    .main-nav {
-        font-size: 16px; /*em_change*/
-    }
-    
-    .front {
+    html {
         font-size: 16px;
     }
-    
-    .research-box-wrapper {
-
-        font-size: 16px; /*em_change*/
-    }
-    
-    .container {
-        font-size: 16px;
-    }
-    
-    /*em_change_end*/
 }

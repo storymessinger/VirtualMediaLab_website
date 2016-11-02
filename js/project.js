@@ -74,10 +74,11 @@ $(function(){
         },
         
         render: function() {
-            var htmlStr='';
+            var projectHeader='';
 //            octopus.getOnProjects().forEach(function(project){
             $.each(octopus.getOnProjects(), function(name, project){
-                htmlStr += '<li class="infoTitle">' + name + '</li>';
+                projectHeader = name; 
+                
                 $.each(project.Information, function(entryIndex, entry){
                     htmlStr += '<li class="infoIndex">' +
                         '<span>' + entryIndex + ' : ' +

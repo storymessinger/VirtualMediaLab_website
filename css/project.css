@@ -37,15 +37,27 @@ html {
     width:100%;
     height:100%;
     font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px; /* rem */ 
+    
 }
 
+body {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    min-height: 100vh; /* for the sticky footer  */
+    
+}
+
+/* ------------------ */
+
 .infoTitle {
-    font-size: 3.75em;
+    font-size: 3.7rem;
     font-weight: 200;
 }
 
 .infoIndex {
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 .infoIndex span {
@@ -53,19 +65,158 @@ html {
 }
 
 
-@media screen and (min-width: 500px) {
+/* -------------------*/ 
+
+.contents {
+    width: 90vw;
+    max-width: 1500px;
+    
+    margin-top: 6rem;
+}
+
+
+
+.big-header {
+    font-size: 2rem;
+    font-weight: 200;
+    padding-top: 0.5rem;
+    width: 100%;
+    height: 6rem;
+    border-top: 2px solid #757575;
+}
+
+.module-project {
+    width: 100%;
+    padding-bottom: 6rem;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+.project-left {
+    width: 45%;
+    
+    display: flex;
+    flex-flow: column nowrap;
     
 }
 
-@media screen and (min-width: 1200px) {
+.top-index {
+    padding-top: 0.5rem;
+    height: 5rem;
+    border-top: 1px solid #CCCCCC;
+}
+.project-header {
+    font-size: 3.75rem;
+    font-weight: 200;
+    
+    padding-bottom: 3.75rem;
+}
+
+.project-index {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-style: italic;
+    width: 7rem;
+    text-align: right;
+    position: absolute;
+}
+
+.project-info {
+    margin-left: 8rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.project-btn {
+    margin-top: 2rem;
+    margin-left: 8rem;
+    width: 125px;
+    height: 45px;
+}
+
+.project-middle{
+    width: 40%;
+    padding-left: 3rem;
+}
+
+.project-middle img {
+    max-width: 100%;
+}
+
+.project-right {
+    width: 15%;
+    padding-left: 3rem;
+}
+
+.project-right img {
+    max-width: 100%;
+}
+
+.funding-info {
+    height: 10rem;
+    font-size: 0.8rem;
+}
+
+.funding-info img {
+    margin-bottom: 1rem;
+}
+.funding-manager {
+    height: 10rem;
+    padding-top: 1rem;
+    font-size: 1.3rem;
+    
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.funding-mananger img {
+    margin-bottom: 1rem;
+}
+
+
+@media screen and (max-width: 1500px) {
+    
+}
+
+@media screen and (max-width: 1080px) {
     html {
-        font-size: 12px;
+        font-size: 12px
+    }
+    .project-left {
+        width: 100%;
+    } 
+    .project-middle {
+        padding-left: 0;
+        padding-right: 3rem;
+        width: 85%;
     }
     
+    .project-right {
+        padding-left: 0;
+    }
+    
+    .funding-info img {
+        display: none;
+    }
 }
 
-@media screen and (min-width: 1500px) {
+@media screen and (max-width: 500px ) {
+    html {
+        font-size: 9px
+    }
     
+    .project-middle {
+        width: 100%;
+    }
+    
+    .project-right {
+        display:none;
+    }
 }
+
+
 
 
