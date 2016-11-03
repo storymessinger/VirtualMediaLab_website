@@ -39,11 +39,27 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">About</a></li>
-                    <li><a href="#">People</a></li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            About <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html">About us</a></li>
+                            <li><a href="#">Partners</a></li>
+                            <li><a href="#">Admission</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            People <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Professors</a></li>
+                            <li><a href="#">Students</a></li>
+                            <li><a href="#">Former Members</a></li>
+                        </ul>
+                    </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            Research<span class="caret"></span>
+                            Research <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="project.html">Projects</a></li>
@@ -55,7 +71,7 @@
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                            News&Events<span class="caret"></span>
+                            News&Events <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Recent News</a></li>
@@ -78,7 +94,8 @@
         <!-- /.container-fluid -->
         <ol class="breadcrumb">
             <li><a href="#">Home</a></li>
-            <li class="active">About</li>
+            <li><a href="#">About</a></li>
+            <li class="active">About us</li>
         </ol>
     </nav>
 
