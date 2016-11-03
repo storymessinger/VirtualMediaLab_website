@@ -44,7 +44,7 @@ p::selection {
 }
 
 body {
-    padding-top: 80px;
+    padding-top: 65px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -56,7 +56,7 @@ body {
 
 .breadcrumb {
     position: absolute;
-    top: 80px;
+    top: 65px;
     left: 0;
     width: 100vw;
     padding-right: 9vw;
@@ -75,7 +75,7 @@ body {
 .navbar-fixed-top {
     background: none;
     background-color: #FFFFFF;
-    padding: 15px 8vw 15px 8vw;
+    padding: 15px 8vw 0px 8vw;
     border-bottom: 1px solid #fff;
 }
 
@@ -87,8 +87,8 @@ body {
 /* 로고 이미지 */
 .navbar .navbar-brand img {
     position: absolute;
-    height: 60px;
-    top:10px;
+    height: 55px;
+    top:5px;
 }
 
 /* 기본 nav 버튼 */
@@ -114,7 +114,19 @@ body {
     background: none;
     color: #EA5A29;
 }
-
+.navbar .dropdown-menu {
+    background-color: rgba(34,34,37, 0.9);
+}
+.navbar .dropdown-menu > li > a{
+    color: #FFF;
+    font-size: 0.9em;
+    padding-top: 0.65em;
+    padding-bottom: 0.65em;
+}
+.navbar .dropdown-menu > li > a:hover {
+    background: none;
+    color: #EA5A29;
+}
 /* 1080픽셀 아래는 검색기능 가리기 */
 @media screen and (max-width: 1080px) {
     .navbar-right {
@@ -195,6 +207,10 @@ body {
     align-items: center;
 }
 
+.research-box div {
+    margin-top: 1rem;
+
+}
 .research-intro {
     width: 100%;
     padding-bottom: 6rem;
@@ -234,6 +250,7 @@ body {
     text-align: center;
     
 }
+
 .research-box a:hover {
     color: #EA5A29;
   }
@@ -278,6 +295,9 @@ body {
     font-weight: 600; 
 }
 
+.publication-recent p {
+    margin-top: 1rem;
+}
     
 .news {
     border-top: 1px solid #E9E5DE;
@@ -368,7 +388,7 @@ body {
     flex-grow: 1;
 }
 .footer-logo {
-    width: 17vw;
+    width: 18rem; 
 }
 .footer-logo img {
     width: 100%;
@@ -407,6 +427,7 @@ body {
         text-align: left;
     }
     
+
     /* pub & news setting their things in rows */
     .publication {
         width: 40vw;
@@ -418,6 +439,7 @@ body {
     .publication-recent {
        font-size: 1.4rem;
     }
+    
     .news {
         
         width: 40vw;
@@ -501,9 +523,8 @@ body {
 }
 
 @media screen and (min-width: 1500px) {
-    
     html {
-        font-size: 14px;
+        font-size: 12px;
     }
 }
 

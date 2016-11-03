@@ -38,11 +38,11 @@ html {
     height:100%;
     font-family: 'Source Sans Pro', sans-serif;
     
-    font-size: 14px;
+    font-size: 12px;
 }
 
 body {
-    padding-top: 120px;
+    padding-top: 100px;
     
     display: flex;
     flex-flow: column nowrap;
@@ -55,7 +55,7 @@ body {
 
 .breadcrumb {
     position: absolute;
-    top: 80px;
+    top: 65px;
     left: 0;
     width: 100vw;
     padding-right: 9vw;
@@ -74,8 +74,8 @@ body {
 .navbar-fixed-top {
     background: none;
     background-color: #FFFFFF;
-    padding: 15px 8vw 15px 8vw;
-    border-bottom: 1px solid #fff;
+    padding: 15px 8vw 0px 8vw;
+    border-bottom: 1px solid #646367 ;
 }
 
 /* 로고를 위해 제공된 공간은 width 180px */
@@ -86,8 +86,8 @@ body {
 /* 로고 이미지 */
 .navbar .navbar-brand img {
     position: absolute;
-    height: 60px;
-    top:10px;
+    height: 55px;
+    top:5px;
 }
 
 /* 기본 nav 버튼 */
@@ -113,7 +113,19 @@ body {
     background: none;
     color: #EA5A29;
 }
-
+.navbar .dropdown-menu {
+    background-color: rgba(34,34,37, 0.9);
+}
+.navbar .dropdown-menu > li > a{
+    color: #FFF;
+    font-size: 0.9em;
+    padding-top: 0.65em;
+    padding-bottom: 0.65em;
+}
+.navbar .dropdown-menu > li > a:hover {
+    background: none;
+    color: #EA5A29;
+}
 /* 1080픽셀 아래는 검색기능 가리기 */
 @media screen and (max-width: 1080px) {
     .navbar-right {
@@ -163,14 +175,14 @@ body {
     border-top: 1px solid #CCCCCC;
 }
 .project-header {
-    font-size: 3.75rem;
+    font-size: 3.5rem;
     font-weight: 200;
     
     padding-bottom: 3.75rem;
 }
 
 .project-index {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
     font-style: italic;
     width: 7rem;
@@ -180,7 +192,7 @@ body {
 
 .project-info {
     margin-left: 8rem;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 400;
 }
 
@@ -203,6 +215,8 @@ body {
 .project-right {
     width: 15%;
     padding-left: 3rem;
+    display: flex;
+    flex-flow:column nowrap;
 }
 
 .project-right img {
@@ -210,8 +224,11 @@ body {
 }
 
 .funding-info {
-    height: 10rem;
-    font-size: 0.8rem;
+    height: 50%;
+    font-size: 1rem;
+    
+    display:flex;
+    flex-flow: column;
 }
 
 .funding-info img {
@@ -251,7 +268,7 @@ body {
     flex-grow: 1;
 }
 .footer-logo {
-    width: 17vw;
+    width: 18rem; 
 }
 .footer-logo img {
     width: 100%;
@@ -292,6 +309,9 @@ body {
         padding-left: 0;
     }
     
+    .funding-info {
+        height: 30%;
+    }
     .funding-info img {
         display: none;
     }
@@ -300,6 +320,10 @@ body {
         height: 150px;
     }
     .footer-logo {
+        display: none;
+    }
+    
+    .breadcrumb {
         display: none;
     }
 }
