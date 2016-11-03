@@ -33,75 +33,95 @@ html {
     width:100%;
     height:100%;
     font-family: 'Source Sans Pro', sans-serif;
+    
+    font-size: 9px;
 }
 
 /* Selected text is highlighted in this color */
 p::selection {
     color:#111;
-    background:#eeff41;
+    background:#EA5A29;
 }
 
 body {
+    padding-top: 80px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     min-height: 100vh; /* for the sticky footer  */
     
 }
-.main-nav {
-    height: 110px;
+
+/* ----------------------- */ 
+
+.breadcrumb {
+    position: absolute;
+    top: 80px;
+    left: 0;
     width: 100vw;
-    display: flex;
+    padding-right: 9vw;
+    padding-left: 9vw;
+    margin:0;
     
-    font-size: 10px; /*rem_change*/
+    background: none;
+    background-color: #E9E5DE; 
+    border-radius: 0;
 }
 
-.main-nav .logo {
-    height: 6.25rem;
-    width:auto;
-    margin-left: 2.5rem;
-    margin-right: 5rem;
-}
-
-.main-nav-list {
-    margin: 0;
-    padding: 0;
-    flex-grow: 1;
-    display: flex;
-    flex-flow: row wrap;
-    list-style: none;
-    justify-content: space-around;
-    align-items: center;
-    
-    max-width: 65rem; /* In Big-screen, max size woudl be 65rem x 16px = ~1000px */
-  }
-
-.main-nav-list a {
-/*    padding-right: 6.25rem; */
-    font-size: 1.25rem;
-    font-weight: 600;
-    text-decoration: none;
-    display: flex;
-    color: #8B8884;
-   }
-.main-nav-list a:hover {
+.breadcrumb .active {
     color: #EA5A29;
-  }
-
-.main-nav-search {
-    width: 16rem; /*change*/
-    margin-left: 5rem;
-    margin-right: 2.5rem;
-    display: flex;
-    align-items: center;
 }
 
-.search-content {
-    display: block;
-    font-size: 1.3rem;
+.navbar-fixed-top {
+    background: none;
+    background-color: #FFFFFF;
+    padding: 15px 8vw 15px 8vw;
+    border-bottom: 1px solid #fff;
 }
 
+/* 로고를 위해 제공된 공간은 width 180px */
+.navbar .navbar-brand {
+    width: 180px;
+}
 
+/* 로고 이미지 */
+.navbar .navbar-brand img {
+    position: absolute;
+    height: 60px;
+    top:10px;
+}
+
+/* 기본 nav 버튼 */
+/* 위에 hover 하면 색 변함 */
+.navbar .nav > li > a {
+    background: none;
+    color: #646367;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.navbar .nav > li > a:hover {
+    background: none;
+    color: #EA5A29;
+}
+
+/* 현재 액티브한 버튼 오렌지색 */
+/* 액티브한 버튼 위 호버해도 오렌지색 */
+.navbar .nav .active > a {
+    background: none;
+    color: #EA5A29;
+}
+.navbar .nav .active > a:hover {
+    background: none;
+    color: #EA5A29;
+}
+
+/* 1080픽셀 아래는 검색기능 가리기 */
+@media screen and (max-width: 1080px) {
+    .navbar-right {
+        display: none;
+    }
+}
+    
 .front {
     height: 300px;
     width: 100%; 
@@ -109,7 +129,6 @@ body {
     justify-content: center;
     align-items: center;
     
-    font-size: 7px; /*rem_change*/
 }
 
 .front-intro {
@@ -126,7 +145,7 @@ body {
 }
 
 .front-intro-title {
-    font-size: 5rem;
+    font-size: 4.5rem;
     font-weight: 700;
     text-align: center;
 }
@@ -164,9 +183,7 @@ body {
     align-items: center;
     
     padding-top: 6rem;
-    padding-bottom: 10rem;
-    
-    font-size: 10px; /*rem_change*/
+    padding-bottom: 6rem;
 }
 
 .research-box-wrapper {
@@ -235,7 +252,6 @@ body {
     align-items: center; 
     padding-top: 6rem;
     padding-bottom: 10rem;
-    font-size: 10px;
     
 }
 .publication {
@@ -246,12 +262,20 @@ body {
     justify-content: center;
 }
 
+.publication-intro-title {
+    width: 100%;
+    font-size: 3.2rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    padding-bottom: 3rem;
+}
 .publication-recent {
+    font-size: 1.8rem;
     padding-bottom: 1.5rem;
-    font-size: 1.3rem;
     text-align: center;
     color: #F05A29;
-    font-weight: 600;
+    font-weight: 600; 
 }
 
     
@@ -264,6 +288,16 @@ body {
     justify-content: center;
 }
 
+.news-intro-title {
+    width: 100%;
+    font-size: 3.2rem;
+    font-weight: 600;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
 .news-recent {
     display: flex;
     padding-bottom: 1.5rem;
@@ -274,6 +308,8 @@ body {
     width: 4rem;
     text-align: center;
     padding-right: 2rem;
+    
+    display: none;
 }
 
 .news-date span {
@@ -283,6 +319,7 @@ body {
 
 .news-body {
     margin-left: 2rem;
+    font-size: 1.1rem;
     flex-grow: 1;
 }
 .news-body span {
@@ -322,6 +359,8 @@ body {
     padding-right: 10vw;
     padding-left: 10vw;
     
+    font-size: 1.2rem;
+    
     color: white;
 }
 
@@ -344,7 +383,7 @@ body {
 
 @media screen and (min-width: 500px) {
     html {
-        font-size: 12px;
+        font-size: 10px;
     }
     
     .main {
@@ -376,6 +415,9 @@ body {
         justify-content: space-between;
     }
     
+    .publication-recent {
+       font-size: 1.4rem;
+    }
     .news {
         
         width: 40vw;
@@ -385,13 +427,16 @@ body {
         justify-content: space-between;
     }
     
+    .news-date {
+        display: unset;
+    }
     
 }
 
 @media screen and (min-width: 1080px) {
     
     html {
-        font-size: 14px;
+        font-size: 12px;
     }
     
     .front {
@@ -402,8 +447,13 @@ body {
         font-size: 1.4rem;
         line-height: 150%;
     }
+    .research-box-wrapper {
+
+        flex-flow: row wrap;
+        align-items: flex-start;
+    }
     .research-box {
-        width: 25vw;
+        width: 25%;
         max-width: 370px;
         margin: 0 5vw 0 0 ;
     }
@@ -422,6 +472,15 @@ body {
     
     .publication {
         padding-right: 3vw; 
+    }
+    
+    .publication-intro-title {
+        text-align: left;
+    }
+    
+    .news-intro-title {
+        text-align: left;
+        padding-top: 0;
     }
     
     .news {
@@ -444,6 +503,18 @@ body {
 @media screen and (min-width: 1500px) {
     
     html {
-        font-size: 16px;
+        font-size: 14px;
+    }
+}
+
+
+/* -------------- */ 
+
+@media screen and (max-width: 1080px) {
+    .footer-logo {
+        display: none;
+    }
+    .footer {
+        height: 150px;
     }
 }
