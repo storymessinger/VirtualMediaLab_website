@@ -1,0 +1,372 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200, 400,600,700');
+
+/*    Reset CSS  */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+ol,
+ul {
+    list-style: none;
+}
+a {
+    outline: 0;
+    text-decoration: none;
+    color: #353535;
+}
+
+img {
+    border: 0;
+    transition: width 0.5s;
+}
+
+
+/* Basics */
+* {
+    -webkit-box-sizing: border-box:
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*    From here    */
+
+html {
+    width:100%;
+    height:100%;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+    padding-top: 100px;
+    
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    min-height: 100vh; /* for the sticky footer  */
+}
+
+/* ------------------ */
+
+.breadcrumb {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100vw;
+    padding-right: 9vw;
+    padding-left: 9vw;
+    margin:0;
+    
+    background: none;
+    background-color: #E9E5DE; 
+    border-radius: 0;
+}
+
+.breadcrumb .active {
+    color: #EA5A29;
+}
+
+.navbar-fixed-top {
+    background: none;
+    background-color: #FFFFFF;
+    padding: 15px 8vw 0px 8vw;
+    border-bottom: 1px solid #646367 ;
+}
+
+/* 로고를 위해 제공된 공간은 width 180px */
+.navbar .navbar-brand {
+    width: 180px;
+}
+
+/* 로고 이미지 */
+.navbar .navbar-brand img {
+    position: absolute;
+    height: 55px;
+    top:5px;
+}
+
+/* 기본 nav 버튼 */
+/* 위에 hover 하면 색 변함 */
+.navbar .nav > li > a {
+    background: none;
+    color: #646367;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.navbar .nav > li > a:hover {
+    background: none;
+    color: #EA5A29;
+}
+
+/* 현재 액티브한 버튼 오렌지색 */
+/* 액티브한 버튼 위 호버해도 오렌지색 */
+.navbar .nav .active > a {
+    background: none;
+    color: #EA5A29;
+}
+.navbar .nav .active > a:hover {
+    background: none;
+    color: #EA5A29;
+}
+.navbar .dropdown-menu {
+    background-color: rgba(34,34,37, 0.9);
+}
+.navbar .dropdown-menu > li > a{
+    color: #FFF;
+    font-size: 0.9em;
+    padding-top: 0.65em;
+    padding-bottom: 0.65em;
+}
+.navbar .dropdown-menu > li > a:hover {
+    background: none;
+    color: #EA5A29;
+}
+/* 1080픽셀 아래는 검색기능 가리기 */
+@media screen and (max-width: 1080px) {
+    .navbar-right {
+        display: none;
+    }
+}
+
+/* ------------------------ */ 
+
+
+html {
+    font-size: 16px;
+}
+
+
+.Content {
+    display: flex;
+    width: 70vw;
+    max-width: 1280px;
+    
+    margin-top: 4rem;
+    margin-bottom: 4rem;
+}
+
+
+.Profile {
+    flex-grow: 0;
+    width: 25vw;
+}
+
+.Profile img {
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.Profile p {
+    line-height: 1.1rem; /*THINK*/
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.Profile span {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.About {
+    flex-grow: 1;
+    padding-left: 3vw;
+    
+}
+
+.name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.basicInfo p {
+    font-weight: 700;
+    color: #646367;
+}
+
+.basicInfo span {
+    font-size: 0.9em;
+    font-weight: 400;
+    color: #000;
+}
+
+.divider-1 {
+    width: 100%;
+    height: 1px;
+    background-color: #EA5A29;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.Title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #646367;
+    
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.interest p {
+    font-size: 0.9rem;
+}
+
+.Box {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.BoxTitle {
+    width: 100%;
+}
+
+.BoxDate {
+    width: 30%;
+    flex-grow: 0;
+}
+
+.BoxInfo {
+    flex-grow: 1;
+    font-size: 0.9rem;
+}
+
+.BoxInfo span {
+    font-size: 0.8rem;
+}
+
+.divider-2 {
+    width: 100%;
+    height: 1px;
+    background-color: #646367;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+
+.Box {
+    
+}
+
+
+
+
+/* ------------------------ */ 
+
+.footer {
+    height: 200px;
+    width: 100%;
+    background-color: #222225;
+    
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10vw;
+    padding-left: 10vw;
+    
+    color: white;
+}
+
+.footer-contact {
+    flex-grow: 1;
+}
+.footer-logo {
+    width: 18rem; 
+}
+.footer-logo img {
+    width: 100%;
+}
+
+.very-bottom {
+    width: 100%;
+    height: 15px;
+    background-color: #FAAF40;
+}
+
+/* ------------------------ */ 
+
+
+
+
+@media screen and (max-width: 1500px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .Content {
+        width: 80vw;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+    
+    .Profile {
+        flex-grow: 0;
+        width: 40vw;
+    }
+    
+    .footer {
+        height: 150px;
+    }
+    .footer-logo {
+        display: none;
+    }
+    
+    .breadcrumb {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 750px ) {
+    .Content {
+        width: 70vw;
+        flex-flow: row wrap;
+    }
+    .Profile {
+       width: 100%;
+       display: flex;
+        flex-flow: column;
+/*        align-items: center;*/
+    }
+    
+    .Profile img {
+        width: 50%;
+        margin-bottom: 2rem;
+    }
+    
+    .Profile .contact {
+        display: none;
+    }
+    .About {
+        padding-left: 0vw;
+    }
+}
+
+@media screen and (max-width: 500px ) {
+    html {
+        font-size: 14px;
+    }
+    .Profile {
+        align-items: center;
+    }
+    .Profile img {
+        width: 80%;
+        margin-bottom: 2rem;
+    }
+    .BoxDate {
+        width: 100%;
+        flex-grow: 1;
+        margin: 1rem 0 1rem 0;
+    }
+}
+
+
+
+
