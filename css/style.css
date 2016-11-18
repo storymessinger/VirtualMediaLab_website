@@ -135,18 +135,19 @@ body {
 }
     
 .front {
-    height: 300px;
     width: 100%; 
     display: flex;
-    justify-content: center;
-    align-items: center;
+/*    justify-content: center;*/
+/*    align-items: center;*/
     
 }
 
 .front-intro {
     /* Place it in the middle */ 
-    width: 90vw;
-    max-width: 900px;
+    height: 700px;
+    
+    width: 70vw;
+    left: 15vw;
     
     /* Makes the front-intro infront of the image */
     position: absolute;
@@ -154,6 +155,14 @@ body {
     
     /* font */
     color: white;
+    
+    display: flex;
+    align-items: center;
+}
+
+.front-intro-box {
+    width: 100%;
+    
 }
 
 .front-intro-title {
@@ -169,12 +178,13 @@ body {
 
 .front-intro-body {
     display: none;
+    text-align: center;
 }
 
 .front-BG{
-    height: 100%;
+    height: 700px;
     width: 100%;
-    background: url("../imgs/Home_MainPic.jpg") no-repeat center center fixed; 
+    background: url("../imgs/Home_MainPic_resize.jpg") no-repeat center center fixed; 
     background-size: cover;
     filter: brightness(70%);
 }
@@ -525,6 +535,11 @@ body {
 @media screen and (min-width: 1500px) {
     html {
         font-size: 12px;
+    }
+    
+    .front-intro {
+        width: 50vw;
+        left: 25vw;
     }
 }
 
