@@ -1,6 +1,6 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700');
-
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 /*    Reset CSS  */
 
 * {
@@ -34,7 +34,7 @@ html {
     height:100%;
     font-family: 'Source Sans Pro', sans-serif;
     
-    font-size: 9px;
+    font-size: 10px;
 }
 
 /* Selected text is highlighted in this color */
@@ -233,7 +233,7 @@ body {
 /* intro-title for research...some problem here */
 .research-intro-title {
     width: 100%;
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     font-weight: 600;
     padding-bottom: 0.5rem;
 }
@@ -248,14 +248,14 @@ body {
 /* more info about intro-title */
 .intro-body{
     padding: 0rem 1.5rem 0rem 1.5rem ;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #646367;
 }
 
 .research-box {
     width: 80vw;
     max-width: 500px;
-    font-size: 1.75rem;
+    font-size: 1.4rem;
     font-weight: 700;
     margin: 5vw 0 0 0;
     text-align: center;
@@ -287,17 +287,21 @@ body {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
+    align-items: center;
 }
 
 .publication-intro-title {
     width: 100%;
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     font-weight: 600;
     padding-bottom: 0.5rem;
     text-align: center;
     padding-bottom: 3rem;
 }
 .publication-recent {
+    
+    width: 200px;
+    
     font-size: 1.8rem;
     padding-bottom: 1.5rem;
     text-align: center;
@@ -305,10 +309,16 @@ body {
     font-weight: 600; 
 }
 
+.publication-recent img{
+    height: 150px;
+    padding-bottom: 1.5rem;
+}
+
 .publication-recent p {
     margin-top: 1rem;
 }
     
+
 .news {
     border-top: 1px solid #E9E5DE;
     
@@ -320,7 +330,7 @@ body {
 
 .news-intro-title {
     width: 100%;
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     font-weight: 600;
     padding-bottom: 0.5rem;
     text-align: center;
@@ -330,14 +340,28 @@ body {
 
 .news-recent {
     display: flex;
-    padding-bottom: 1.5rem;
+    padding-bottom: 4.0rem;
 }
 
+.clip-rect {
+    width: 140px;
+    clip-path: polygon(0 0, 140px 0, 140px 140px, 0 140px);
+    -webkit-clip-path: polygon(0 0, 140px 0, 140px 140px, 0 140px);
+/*
+    -webkit-clip-path: circle(35% at center);
+    clip-path: circle(35% at center);
+*/
+}
 
 .news-date {
     width: 4rem;
     text-align: center;
-    padding-right: 2rem;
+    margin-right: 1rem;
+/*    padding-right: 2rem;*/
+    font-size: 0.7rem;
+    
+    position:relative;
+    top:-8px;
     
     display: none;
 }
@@ -348,7 +372,7 @@ body {
 }
 
 .news-body {
-    margin-left: 2rem;
+    margin-left: 1.5rem;
     font-size: 1.1rem;
     flex-grow: 1;
 }
@@ -367,7 +391,7 @@ body {
 .View-all-b {
     margin: auto;
     width: 110px;
-    height: 40px;
+    height: 35px;
     text-align: center;
     color: white;
     background-color: #646367;
@@ -378,7 +402,7 @@ body {
 }
 
 .footer {
-    height: 200px;
+    height: 300px;
     width: 100%;
     background-color: #222225;
     
@@ -392,6 +416,14 @@ body {
     font-size: 1.2rem;
     
     color: white;
+    
+    -webkit-box-shadow: 0px -2px 4px 4px rgba(0, 0, 0, 0.2);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    -moz-box-shadow:    0px -2px 4px 4px rgba(0, 0, 0, 0.2);  /* Firefox 3.5 - 3.6 */
+    box-shadow:         0px -2px 4px 4px rgba(0, 0, 0, 0.2);
+}
+
+.footer-left {
+    
 }
 
 .footer-contact {
@@ -413,7 +445,7 @@ body {
 
 @media screen and (min-width: 500px) {
     html {
-        font-size: 10px;
+        font-size: 12px;
     }
     
     .main {
@@ -525,7 +557,7 @@ body {
     }
     
         
-    .news-recent div:not(:first-child) {
+    .news-recent:not(:first-child) {
         padding-left: 5%; 
     }
     

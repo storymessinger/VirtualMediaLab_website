@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200, 400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 
 /*    Reset CSS  */
 
@@ -37,6 +38,7 @@ html {
     width:100%;
     height:100%;
     font-family: 'Source Sans Pro', sans-serif;
+    
 }
 
 body {
@@ -245,9 +247,10 @@ html {
 
 
 /* ------------------------ */ 
-
 .footer {
-    height: 200px;
+    font-family: Lato;
+    font-size: 0.7rem;
+    height: 300px;
     width: 100%;
     background-color: #222225;
     
@@ -265,7 +268,7 @@ html {
     flex-grow: 1;
 }
 .footer-logo {
-    width: 18rem; 
+    width: 14rem; 
 }
 .footer-logo img {
     width: 100%;
@@ -305,10 +308,10 @@ html {
     }
     
     .footer {
-        height: 150px;
+        height: 200px;
     }
     .footer-logo {
-        display: none;
+        width: 12rem;
     }
     
     .breadcrumb {

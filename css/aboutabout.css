@@ -38,8 +38,6 @@ html {
     width:100%;
     height:100%;
     font-family: 'Source Sans Pro', sans-serif;
-    
-    font-size: 12px;
 }
 
 body {
@@ -49,7 +47,6 @@ body {
     flex-flow: column nowrap;
     align-items: center;
     min-height: 100vh; /* for the sticky footer  */
-    
 }
 
 /* ------------------ */
@@ -134,125 +131,101 @@ body {
     }
 }
 
-/* -------------------*/ 
+/* ------------------------ */ 
 
-.contents {
-    width: 90vw;
-    max-width: 1500px;
-    
-    margin-top: 6rem;
+
+html {
+    font-size: 16px;
 }
 
-
-
-.big-header {
-    font-size: 2rem;
-    font-weight: 200;
-    padding-top: 0.5rem;
-    width: 100%;
-    height: 6rem;
-    border-top: 2px solid #757575;
-}
-
-.module-project {
-    width: 100%;
-    padding-bottom: 6rem;
-    display: flex;
-    flex-flow: row wrap;
-}
-
-
-.project-left {
-    width: 45%;
-    
-    display: flex;
-    flex-flow: column nowrap;
-    
-}
-
-.top-index {
-    padding-top: 0.5rem;
-    height: 5rem;
-    border-top: 1px solid #CCCCCC;
-}
-.project-header {
-    font-size: 3.5rem;
-    font-weight: 200;
-    
-    padding-bottom: 3.75rem;
-}
-
-.project-index {
-    font-size: 1.3rem;
-    font-weight: 600;
-    font-style: italic;
-    width: 7rem;
-    text-align: right;
-    position: absolute;
-}
-
-.project-info {
-    margin-left: 8rem;
-    font-size: 1.3rem;
-    font-weight: 400;
-}
-
-.project-btn {
-    margin-top: 2rem;
-    margin-left: 8rem;
-    width: 125px;
-    height: 45px;
-}
-
-.project-middle{
-    width: 40%;
-    padding-left: 3rem;
-}
-
-.project-middle img {
-    max-width: 100%;
-}
-
-.project-right {
-    width: 15%;
-    padding-left: 3rem;
-    display: flex;
-    flex-flow:column nowrap;
-}
-
-.project-right img {
-    max-width: 100%;
-}
-
-.funding-info {
-    height: 50%;
-    font-size: 1rem;
-    
-    display:flex;
-    flex-flow: column;
-}
-
-.funding-info img {
-    margin-bottom: 1rem;
-}
-.funding-manager {
-    height: 10rem;
-    padding-top: 1rem;
-    font-size: 1.3rem;
-    
+.Content {
     display: flex;
     flex-flow: column;
-    align-items: flex-start;
-    justify-content: space-between;
+    align-items: center;
+    width: 70vw;
+    max-width: 1280px;
+    
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
-.funding-mananger img {
+.Title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    width: 100%;
+    
+}
+
+.divider-1 {
+    width: 100%;
+    height: 1px;
+    background-color: #EA5A29;
+    margin: 1rem 0 1rem 0;
+}
+
+.about-img {
+    max-width: 80vw;
+    margin-bottom: 2rem;
+}
+
+.about-img img{
+    width: 100%;
+}
+
+.about-intro {
+    width: 60vw;
+    text-align: center; 
+/*    line-height: 1.7;*/
+    font-size: 0.9rem;
+}
+
+.about-people {
+    display: flex;
+    width: 80vw;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.about-people-main-intro {
+    padding:  1rem 0 2rem 0;
+    width: 50vw;
+    text-align: center; 
+/*    line-height: 1.7;*/
+    font-size: 0.9rem;
+}
+.about-people-box {
+    width: 25vw;
+}
+
+.about-people-img {
+    width: 100%;
     margin-bottom: 1rem;
 }
 
+.about-people-img img {
+    width: 100%;
+}
+
+.clip-circle {
+    -webkit-clip-path: circle(35% at center);
+    clip-path: circle(35% at center);
+}
+
+.about-people-intro {
+    font-size: 0.9rem;
+    padding: 0 2.5rem 0 2.5rem;
+}
+
+.about-people-intro scan {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+}
+/* ------------------------ */ 
 .footer {
     font-family: Lato;
-    font-size: 1rem;
+    font-size: 0.7rem;
     height: 300px;
     width: 100%;
     background-color: #222225;
@@ -271,12 +244,12 @@ body {
     flex-grow: 1;
 }
 .footer-logo {
-    width: 18rem; 
+    width: 14rem; 
 }
 .footer-logo img {
     width: 100%;
 }
-
+                    
 .very-bottom {
     width: 100%;
     height: 15px;
@@ -290,59 +263,41 @@ body {
 
 @media screen and (max-width: 1500px) {
     html {
-        font-size: 12px;
+        font-size: 16px;
     }
-    
 }
 
 @media screen and (max-width: 1080px) {
     html {
-        font-size: 10px;
-    }
-    .project-left {
-        width: 100%;
-    } 
-    .project-middle {
-        padding-left: 0;
-        padding-right: 3rem;
-        width: 85%;
+        font-size: 14px;
     }
     
-    .project-right {
-        padding-left: 0;
+    .about-people {
+        flex-flow: column;
     }
-    
-    .funding-info {
-        height: 30%;
-    }
-    .funding-info img {
-        display: none;
+    .about-people-box {
+        width: 60vw;
+        padding-bottom: 2rem;
     }
     
     .footer {
         height: 200px;
     }
     .footer-logo {
-        width: 16rem;
+        width: 12rem;
     }
     
-    .breadcrumb {
-        display: none;
-    }
+}
+
+@media screen and (max-width: 750px ) {
+ 
 }
 
 @media screen and (max-width: 500px ) {
     html {
-        font-size: 9px;
+        font-size: 12px;
     }
-    
-    .project-middle {
-        width: 100%;
-    }
-    
-    .project-right {
-        display:none;
-    }
+  
 }
 
 
