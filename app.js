@@ -15,7 +15,7 @@ app.get('/template', function(req,res){
     var time = Date();
     
     // 'Render' the file called temp.** in views folder
-    res.render('temp', {time:Date(), insa:'hello', _title:'Jade'});
+    res.render('temp', {time:time, insa:'hello', _title:'Jade'});
 });
 
 // Baiic router 
