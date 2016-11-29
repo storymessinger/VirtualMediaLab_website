@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 app.locals.pretty = true;
 
 // seeting t use jade
-app.set('view engine', 'jade');
+app.set('view engine','pug');
 app.set('views', './views');
 
 // setting to use the static page
@@ -13,7 +13,7 @@ app.use(express.static('public'));
 // setting body-parser. Able to use body for post
 app.use(bodyParser.urlencoded({
     extended:false
-}))
+}));
 
 
 // get post test
@@ -21,7 +21,7 @@ app.get('/form', function(req,res){
     
     res.render('form',{
     });
-})
+});
 
 // get test
 /*app.get('/form_receiver', function(req,res){
@@ -35,10 +35,11 @@ app.post('/form_receiver', function(req,res){
     var title = req.body.title;
     var description = req.body.description;
     res.send(title + ' '+description);
-})
+});
 
 // Router to test out query string
 app.get('/topic/:id', function(req, res){
+    var result = req.params.id;
     var topics = [
         'Javascript is ...',
         'Nodejs is',
@@ -47,7 +48,7 @@ app.get('/topic/:id', function(req, res){
     
     res.render('top',{
         _topics: topics,
-        semanticResult:req.params.id
+        semanticResult:result
     });
 });
 
