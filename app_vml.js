@@ -106,7 +106,6 @@ app.get(['/student/:id/delete'], function (req, res) {
 app.get(['/student/:id/edit'], function (req, res) {
 
     var sql = 'SELECT id, name FROM students';
-
     connection.query(sql, function (err, rows, fields) {
 
         if (err) {
